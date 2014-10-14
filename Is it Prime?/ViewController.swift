@@ -26,35 +26,13 @@ class ViewController: UIViewController {
                 lblMessage.text = "Please enter a positive number."
             
             }else{
+                prime = self.isPrime(number!)
                 
-                if number == 1 {
-                   lblMessage.text = "1 is not prime."
+                if(prime) {
+                    lblMessage.text = "\(number!) is Prime!"
                 }else{
-                    //Enhancement
-                    var max = sqrt(Double(number!))
-                    max = ceil(max)
-                    println("Max: \(Int(max))")
-                    let maxInt = Int(max)
-                    
-                    for var i=2; i < maxInt; ++i {
-                        
-                        var rest = number! % i
-                        println("\(number!) % \(i) = \(rest)")
-
-                        if rest == 0 {
-                            //Not prime
-                            prime = false
-                            break
-                        }
-                    }
-                 
-                    if(prime) {
-                        lblMessage.text = "\(number!) is Prime!"
-                    }else{
-                        lblMessage.text = "\(number!) is not Prime!"
-                    }
+                    lblMessage.text = "\(number!) is not Prime!"
                 }
-                
             }
             
         }else{
@@ -65,14 +43,38 @@ class ViewController: UIViewController {
     
     func isPrime(number: Int) -> Bool {
     
-        var isPrime = false
-        let MIN_NUM = 3
-        let MAX_NUM = number - 1
-        let modulus = number % 2
+        var isPrime = true
+        let MIN_NUM = 2
+        let MAX_NUM = Int(ceil(sqrt(Double(number))))
+        //let modulus = number % 2
         
+        if number == 1 {
+            isPrime = false
+        }else if number == 2{
+            isPrime = true
+        }else{
+            //Enhancement
+            //var max =
+            //max = ceil(max)
+            println("Max: \(MAX_NUM)")
+            //let maxInt = Int(max)
+            
+            for var i = MIN_NUM; i <= MAX_NUM; ++i {
+                
+                var rest = number % i
+                
+                println("\(number) % \(i) = \(rest)")
+                
+                if rest == 0 {
+                    //Not prime
+                    isPrime = false
+                    break
+                }
+            }
+            
+        }
         
-        
-        return true;
+        return isPrime;
     }
     
     

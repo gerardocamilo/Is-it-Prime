@@ -29,6 +29,8 @@
                                 <rect key="frame" x="143" y="122" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="GeW-96-KAV"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="97" id="nDS-vl-kjh"/>
+                                    <constraint firstAttribute="height" constant="30" id="rYY-AU-Cnb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -42,8 +44,12 @@
                                     <action selector="btnCalculate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0lm-Ra-nQC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JzS-aH-MrW">
-                                <rect key="frame" x="16" y="247" width="334" height="58"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JzS-aH-MrW">
+                                <rect key="frame" x="16" y="247" width="355" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="Lp0-CU-cA6"/>
+                                    <constraint firstAttribute="width" constant="355" id="zZK-La-t0Z"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -56,6 +62,7 @@
                             <constraint firstItem="48M-3f-Tc2" firstAttribute="top" secondItem="aef-MH-hGo" secondAttribute="bottom" constant="35" id="67w-c0-NMt"/>
                             <constraint firstItem="aef-MH-hGo" firstAttribute="centerX" secondItem="gdN-N3-KQJ" secondAttribute="centerX" id="8SC-5D-LgK"/>
                             <constraint firstItem="aef-MH-hGo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="143" id="EG5-BB-Vz8"/>
+                            <constraint firstItem="JzS-aH-MrW" firstAttribute="top" secondItem="48M-3f-Tc2" secondAttribute="bottom" constant="30" id="Ncd-b9-PFX"/>
                             <constraint firstItem="48M-3f-Tc2" firstAttribute="centerX" secondItem="aef-MH-hGo" secondAttribute="centerX" id="qNK-9J-TbK"/>
                         </constraints>
                     </view>
